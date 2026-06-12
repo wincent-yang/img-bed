@@ -1,0 +1,14 @@
+name: Optimize Images
+on:
+  schedule:
+    - cron: '0 0 * * 0' # 每周日运行
+  pull_request:
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: imgbot/action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

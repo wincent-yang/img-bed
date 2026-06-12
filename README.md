@@ -1,2 +1,2 @@
-# images-bed
+# img-bed
 图床
